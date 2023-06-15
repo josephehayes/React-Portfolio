@@ -1,24 +1,28 @@
 import React from 'react';
 import { Link } from 'react-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Container from '@mui/material/Container';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Box from '@mui/material/Box'
+import { Box, Typography, createTheme } from '@mui/material';
+
 
 const Header = () => {
     return (
         <AppBar>
-            <Toolbar>
-                Logo
+            <Box>
+            <Toolbar sx={{ my: 3, mx: 3 }}>
+                <Typography component='h1' variant='h3'>
+                Joseph Hayes||
+                </Typography>
             </Toolbar>
-            <Tabs>
-                <Tab label='About Me'/>
-                <Tab label='Projects'/>
-                <Tab label='Contact'/>
+            <Tabs centered={true}>
+                <Tab sx={{ mx: 'auto', my: 'auto' }} label='About Me'/>
+                <Tab sx={{ mx: 'auto', my: 'auto' }} label='Projects'/>
+                <Tab sx={{ mx: 'auto', my: 'auto' }} label='Contact'/>
             </Tabs>
+            </Box>
         </AppBar>
     );
 }
