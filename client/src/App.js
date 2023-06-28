@@ -2,28 +2,34 @@ import './App.css';
 import React from 'react';
 // eslint-disable-next-line
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeProvider, CssBaseline } from '@mui/material';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
+import { ThemeProvider } from '@mui/material';
 import theme from "./styles/index";
 import Header from './components/header';
+import NavTabs from './components/navTabs';
 // eslint-disable-next-line
 import Home from './components/home';
 // eslint-disable-next-line
-import { Container } from '@mui/material';
+import { Container, Grid, Box } from '@mui/material';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Container maxWidth="lg">
-        <Header />
-        <Tabs centered={true}>
-          <Tab sx={{ mx: 'auto', my: 'auto' }} label='About Me' />
-          <Tab sx={{ mx: 'auto', my: 'auto' }} label='Projects' />
-          <Tab sx={{ mx: 'auto', my: 'auto' }} label='Contact' />
-        </Tabs>
-        {/*
+      <Grid
+        container
+        spacing={2}
+        direction="column"
+        justifyContent="space-between"
+        alignItems="flex-start"
+        my='100px'
+      >
+        <Grid item xs={12}>
+          <Header />
+        </Grid>
+        <Grid item xs={4}>
+          <NavTabs />
+        </Grid>
+        <Grid item >
+          {/*
            <Route
            path="/"
            element={<Home />} 
@@ -40,11 +46,11 @@ function App() {
           */}
 
 
-        {/*
+          {/*
         <Footer />
          */}
-
-      </Container>
+        </Grid>
+      </Grid>
     </ThemeProvider>
   );
 }
