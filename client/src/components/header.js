@@ -5,7 +5,7 @@ import { Box, Typography, Grid } from '@mui/material';
 
 const Header = () => {
     return (
-        <AppBar>
+        <AppBar position="sticky">
             <Box>
                 <Toolbar sx={{ my: 3, mx: 3 }}>
                     <Grid

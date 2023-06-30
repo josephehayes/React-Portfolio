@@ -16,19 +16,18 @@ function LinkTab(props) {
 }
 
 const NavTabs = () => {
-  const [value, setValue] = React.useState(0);
+  const [tab, setTab] = React.useState(0);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
+  const handleChange = (event, newTab) => {
+    setTab(newTab);
   };
 
   return (
     <Box sx={{ width: '100%' }}>
-      {/* orientation='vertical' */}
-      <Tabs value={value} variant='fullWidth' centered onChange={handleChange} aria-label="Nav Tabs"> 
-        <LinkTab label="Home" href="/" />
-        <LinkTab label="Projects" href="/projects" />
-        <LinkTab label="Contact" href="/contact" />
+      <Tabs value={tab} variant='fullWidth' orientation='vertical' onChange={handleChange} aria-label="Nav Tabs"> 
+        <Tab label="Home" href="home" />
+        <Tab label="Projects" href="projects" />
+        <Tab label="Contact" value="contact" />
       </Tabs>
     </Box>
   );
