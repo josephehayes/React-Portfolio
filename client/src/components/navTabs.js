@@ -25,8 +25,8 @@ const NavTabs = () => {
   return (
     <Box sx={{ width: '100%' }}>
       <Tabs value={tab} variant='fullWidth' orientation='vertical' onChange={handleChange} aria-label="Nav Tabs"> 
-        <Tab label="Home" href="home" />
-        <Tab label="Projects" href="projects" />
+        <Tab label="Home" value="home" />
+        <Tab label="Projects" value="projects" />
         <Tab label="Contact" value="contact" />
       </Tabs>
     </Box>

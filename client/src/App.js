@@ -39,9 +39,9 @@ function App() {
               width: '100%',
               minHeight: '80vh'
             }}>
-            <TabPanel value='home' index={0} dir={theme.direction}>
+            {/* <TabPanel value='home' index={0} dir={theme.direction}>
               <Home />
-            </TabPanel>
+            </TabPanel> */}
             </Box>
           </Grid>
         </Grid>
