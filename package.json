@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "devDependencies": {
-    "concurrently": "^5.1.0"
+    "concurrently": "^5.1.0",
+    "eslint-plugin-react-hooks": "^4.6.0"
   },
   "scripts": {
     "start": "node server/server.js",
@@ -25,11 +26,5 @@
   },
   "homepage": "https://github.com/josephehayes/20-React-Portfolio#readme",
   "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.13.5",
-    "@mui/styled-engine-sc": "^5.12.0",
-    "@mui/system": "^5.13.6",
-    "styled-components": "^5.3.11"
   }
 }
