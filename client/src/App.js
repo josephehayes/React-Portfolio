@@ -5,7 +5,7 @@ import theme from "./styles/index";
 import Header from './components/header';
 // import NavTabs from './components/navTabs';
 // es-lint disable next line
-// import Home from './components/home';
+import Home from './components/home';
 import { Grid } from '@mui/material';
 import Box from '@mui/material/Box';
 
@@ -14,7 +14,7 @@ import { TabContext, TabList, TabPanel } from '@mui/lab';
 
 function App() {
 
-  const [value, setValue] = useState("'0'");
+  const [value, setValue] = useState("1");
 
   const handleChange = (event, newTab) => {
     setValue(newTab);
@@ -25,6 +25,7 @@ function App() {
       <CssBaseline />
       <Header />
       <Container maxWidth='false'>
+
         <Grid
           container
           columnSpacing={2}
@@ -33,44 +34,42 @@ function App() {
           alignItems="flex-start"
           my='10px'
         >
-          <Grid item xs={1} px={1}>
-            {/* <NavTabs /> */}
-          </Grid>
-          <Grid item xs={11} sx={{
-            '--Grid-borderWidth': '1px',
-            borderTop: 'var(--Grid-borderWidth) solid',
-            borderLeft: 'var(--Grid-borderWidth) solid',
-            borderRight: 'var(--Grid-borderWidth) solid',
-            borderBottom: 'var(--Grid-borderWidth) solid',
-            borderColor: 'divider'
-          }}>
-            <Box
-              sx={{
-                width: '100%',
-                minHeight: '80vh'
-              }}>
-              {/* <TabPanel value='home' index={0} dir={theme.direction}>
-              <Home />
-            </TabPanel> */}
-              <Box sx={{ width: '100%' }}>
-                <TabContext value={value}>
-                  <Box>
-                    <TabList orientation='vertical' variant='fullWidth' onChange={handleChange} aria-label="Nav Tabs">
-                      <Tab label="Home" value="1" />
-                      <Tab label="Projects" value="2" />
-                      <Tab label="Contact" value="3" />
-                    </TabList>
-                  </Box>
-                  <TabPanel value="1">Panel One</TabPanel>
-                  <TabPanel value="2">Panel Two</TabPanel>
-                  <TabPanel value="3">Panel Three</TabPanel>
-                </TabContext>
+          <TabContext value={value}>
+            <Grid item xs={1} px={1}>
+              <TabList orientation='vertical' variant='fullWidth' onChange={handleChange} aria-label="Nav Tabs">
+                <Tab label="Home" value="1" />
+                <Tab label="Projects" value="2" />
+                <Tab label="Contact" value="3" />
+              </TabList>
+            </Grid>
+            <Grid item xs={11} sx={{
+              '--Grid-borderWidth': '1px',
+              borderTop: 'var(--Grid-borderWidth) solid',
+              borderLeft: 'var(--Grid-borderWidth) solid',
+              borderRight: 'var(--Grid-borderWidth) solid',
+              borderBottom: 'var(--Grid-borderWidth) solid',
+              borderColor: 'divider'
+            }}>
+              <Box
+                sx={{
+                  width: '100%',
+                  minHeight: '80vh'
+                }}>
+                <TabPanel value="1">
+                  <Home />
+                </TabPanel>
+                <TabPanel value="2">
+                  Panel Two
+                </TabPanel>
+                <TabPanel value="3">
+                  Panel Three
+                </TabPanel>
               </Box>
-            </Box>
-          </Grid>
+            </Grid>
+          </TabContext>
         </Grid>
       </Container>
-    </ThemeProvider>
+    </ThemeProvider >
   );
 }
 
