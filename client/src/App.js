@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
-import { ThemeProvider, CssBaseline, Container } from '@mui/material';
+import { ThemeProvider, CssBaseline, Container, Divider } from '@mui/material';
 import theme from "./styles/index";
 import Header from './components/header';
 // import NavTabs from './components/navTabs';
@@ -11,6 +11,7 @@ import Box from '@mui/material/Box';
 
 import Tab from '@mui/material/Tab';
 import { TabContext, TabList, TabPanel } from '@mui/lab';
+import ProjectsList from './components/projects';
 
 function App() {
 
@@ -24,18 +25,17 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Header />
+      <Divider />
       <Container maxWidth='false'>
-
         <Grid
           container
           columnSpacing={2}
-          // direction="column"
           justifyContent="space-between"
           alignItems="flex-start"
           my='10px'
         >
           <TabContext value={value}>
-            <Grid item xs={1} px={1}>
+            <Grid item mr={1}>
               <TabList orientation='vertical' variant='fullWidth' onChange={handleChange} aria-label="Nav Tabs">
                 <Tab label="Home" value="1" />
                 <Tab label="Projects" value="2" />
@@ -53,13 +53,14 @@ function App() {
               <Box
                 sx={{
                   width: '100%',
-                  minHeight: '80vh'
+                  minHeight: '80vh',
+                  alignItems: 'center'
                 }}>
                 <TabPanel value="1">
                   <Home />
                 </TabPanel>
-                <TabPanel value="2">
-                  Panel Two
+                <TabPanel value="2" sx={{  }}>
+                  <ProjectsList />
                 </TabPanel>
                 <TabPanel value="3">
                   Panel Three
