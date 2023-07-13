@@ -13,15 +13,14 @@ const FirstPortfolioCard = () => {
           component="img"
           height="140"
           image="/static/images/cards/contemplative-reptile.jpg"
-          alt="green iguana"
+          alt="First Portfolio"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Lizard
+            My First Portfolio
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            My first portfolio, written in vanilla HTML and CSS.
           </Typography>
         </CardContent>
       </CardActionArea>

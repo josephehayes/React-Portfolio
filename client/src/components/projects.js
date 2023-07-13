@@ -13,6 +13,7 @@ const ProjectsList = () => {
             alignContent={'center'}
             justifyContent={'space-around'}
             rowSpacing={6}
+            sx={{ marginTop: 0 }}
         >
             <Grid container item
                 id='proj-top-row'

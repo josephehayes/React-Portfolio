@@ -13,15 +13,14 @@ const MealerDealerCard = () => {
           component="img"
           height="140"
           image="/static/images/cards/contemplative-reptile.jpg"
-          alt="green iguana"
+          alt="The Mealer Dealer"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Lizard
+            The Mealer Dealer
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            A meal prep app using MySQL, [css package?], JS, and [something else] to help busy users organize and find new recipes.
           </Typography>
         </CardContent>
       </CardActionArea>

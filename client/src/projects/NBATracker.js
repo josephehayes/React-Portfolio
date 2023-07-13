@@ -13,15 +13,14 @@ const NBATrackerCard = () => {
           component="img"
           height="140"
           image="/static/images/cards/contemplative-reptile.jpg"
-          alt="green iguana"
+          alt="NBA Player Tracker"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Lizard
+            NBA Player Tracker
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            My first big project using Bulma, localstorage, JS, and third-party APIs to look up and locally save lists of NBA players, the team they play on, and their stats.
           </Typography>
         </CardContent>
       </CardActionArea>

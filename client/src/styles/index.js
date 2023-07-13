@@ -5,7 +5,9 @@ const theme = createTheme({
         root: {
             minHeight: '100vh',
             width: '100vw',
-            overflow: 'hidden'
+            overflow: 'hidden',
+            margin: 0,
+            padding: 0
         },
         mode: 'dark',
         primary: {
