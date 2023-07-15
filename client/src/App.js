@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useRef } from 'react';
-import { ThemeProvider, CssBaseline, Container, Slide } from '@mui/material';
+import { ThemeProvider, CssBaseline, Container, Slide, useThemeProps } from '@mui/material';
 import theme from "./styles/index";
 import Header from './components/header';
 // import NavTabs from './components/navTabs';
@@ -11,13 +11,16 @@ import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
 import { TabContext, TabList, TabPanel } from '@mui/lab';
 import ProjectsList from './components/projects';
+import Contact from './components/contact';
 
 function App() {
 
   const [value, setValue] = useState("1");
+  const [anim, setAnim] = useState('down')
   const containerRef = useRef(null);
 
   const handleChange = (event, newTab) => {
+    value < newTab ? setAnim('up') : setAnim('down');
     setValue(newTab);
   }
 
@@ -36,7 +39,6 @@ function App() {
             justifyContent="space-between"
             alignItems="flex-start"
             my='10px'
-            // ref={containerRef}
           >
             <TabContext value={value}>
               <Grid item mr={1}>
@@ -52,9 +54,11 @@ function App() {
                 borderLeft: 'var(--Grid-borderWidth) solid',
                 borderRight: 'var(--Grid-borderWidth) solid',
                 borderBottom: 'var(--Grid-borderWidth) solid',
-                borderColor: 'divider'
+                borderColor: 'divider',
+                overflow: 'hidden'
               }}
-              // ref={containerRef}
+                ref={containerRef}
+                className={theme.tabContainer}
               >
                 <Box
                   sx={{
@@ -62,22 +66,45 @@ function App() {
                     minHeight: '80vh',
                     alignItems: 'center'
                   }}
-                  // ref={containerRef}
-                >                  
-                  <Slide in={value === "1"} container={containerRef.current} direction='right'>
-                  <TabPanel value="1">
-                    <Home />
-                  </TabPanel>
+                >
+                  <Slide
+                    in={value === "1"}
+                    container={containerRef.current}
+                    direction={anim}
+                    mountOnEnter
+                    unmountOnExit
+                    easing={ theme.transitions.easing.easeInOut }
+                    timeout={{ enter: theme.transitions.duration.enteringScreen, exit: theme.transitions.duration.leavingScreen }}
+                  >
+                    <TabPanel value="1">
+                      <Home />
+                    </TabPanel>
                   </Slide>
-                  <Slide in={value === "2"} container={containerRef.current} direction='right'>
-                  <TabPanel value="2" sx={{}}>
-                    <ProjectsList />
-                  </TabPanel>
+                  <Slide
+                    in={value === "2"}
+                    container={containerRef.current}
+                    direction={anim}
+                    mountOnEnter
+                    unmountOnExit
+                    easing={ theme.transitions.easing.easeInOut }
+                    timeout={{ enter: theme.transitions.duration.enteringScreen, exit: theme.transitions.duration.leavingScreen }}
+                  >
+                    <TabPanel value="2" sx={{}}>
+                      <ProjectsList />
+                    </TabPanel>
                   </Slide>
-                  <Slide in={value === "3"} container={containerRef.current} direction='right'>
-                  <TabPanel value="3">
-                    Contact Info
-                  </TabPanel>
+                  <Slide
+                    in={value === "3"}
+                    container={containerRef.current}
+                    direction={anim}
+                    mountOnEnter
+                    unmountOnExit
+                    easing={ theme.transitions.easing.easeInOut }
+                    timeout={{ enter: theme.transitions.duration.enteringScreen, exit: theme.transitions.duration.leavingScreen }}
+                  >
+                    <TabPanel value="3">
+                      <Contact />
+                    </TabPanel>
                   </Slide>
                 </Box>
               </Grid>
