@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useRef } from 'react';
-import { ThemeProvider, CssBaseline, Container, Slide, useThemeProps } from '@mui/material';
+import { ThemeProvider, CssBaseline, Container, Slide } from '@mui/material';
 import theme from "./styles/index";
 import Header from './components/header';
 // import NavTabs from './components/navTabs';

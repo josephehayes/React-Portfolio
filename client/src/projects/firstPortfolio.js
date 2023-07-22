@@ -12,8 +12,9 @@ const FirstPortfolioCard = () => {
         <CardMedia
           component="img"
           height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
+          image="/static/HTML-CSS-Portfolio-SS.png"
           alt="First Portfolio"
+          // html-css-portfolio-production.up.railway.app
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
