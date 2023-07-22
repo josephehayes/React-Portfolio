@@ -1,6 +1,9 @@
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
+    icon: {
+        minWidth: '200px'
+    },
     palette: {
         root: {
             minHeight: '100vh',
