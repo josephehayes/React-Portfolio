@@ -1,6 +1,8 @@
 // es-lint disable next line
-import { Box, Grid, Stack, Typography } from '@mui/material';
-// Icon,
+import { Box, Grid, Stack, Link, Typography } from '@mui/material';
+import { LinkedIn, Twitter, GitHub } from '@mui/icons-material';
+import theme from '../styles';
+
 import React from 'react';
 
 const Contact = () => {
@@ -10,22 +12,24 @@ const Contact = () => {
             justifyContent={'center'}
             rowSpacing={4}
         >
-            <Grid item>
-                <Box>
-                    {/* <Icon>
-                    GitHub
-                    </Icon>
-                    <Icon>
-                    LinkedIn
-                    </Icon>
-                    <Icon>
-                    Twitter
-                </Icon> */}
-
+            <Grid item spacing={4} xs={12} alignItems={'center'}>
+                <Box sx={{
+                    maxWidth: '33%',
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    textAlign: 'center',
+                    textJustify: 'space-around'
+                }}>
+                    <Link href="https://github.com/josephehayes" classes={theme.icon} target="_blank" >
+                        <GitHub />
+                    </Link>
+                    <Link href="https://www.linkedin.com/in/josephehayes1/" target="_blank" >
+                        <LinkedIn />
+                    </Link>
+                    <Link href="https://twitter.com/s3f96" target="_blank" >
+                        <Twitter />
+                    </Link>
                     {/* Filler */}
-                    <Typography>
-                        Github LinkedIn Twitter
-                    </Typography>
                 </Box>
             </Grid>
             <Grid item>
