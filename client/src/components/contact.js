@@ -1,5 +1,6 @@
 // es-lint disable next line
-import { Box, Grid, Icon, Stack, Typography } from '@mui/material';
+import { Box, Grid, Stack, Typography } from '@mui/material';
+// Icon,
 import React from 'react';
 
 const Contact = () => {
