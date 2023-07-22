@@ -24,6 +24,8 @@ function App() {
     setValue(newTab);
   }
 
+
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -73,7 +75,7 @@ function App() {
                     direction={anim}
                     mountOnEnter
                     unmountOnExit
-                    easing={ theme.transitions.easing.easeInOut }
+                    easing={ theme.transitions.easing.easeIn }
                     timeout={{ enter: theme.transitions.duration.enteringScreen, exit: theme.transitions.duration.leavingScreen }}
                   >
                     <TabPanel value="1">
@@ -86,7 +88,7 @@ function App() {
                     direction={anim}
                     mountOnEnter
                     unmountOnExit
-                    easing={ theme.transitions.easing.easeInOut }
+                    easing={ theme.transitions.easing.easeIn }
                     timeout={{ enter: theme.transitions.duration.enteringScreen, exit: theme.transitions.duration.leavingScreen }}
                   >
                     <TabPanel value="2" sx={{}}>
@@ -99,7 +101,7 @@ function App() {
                     direction={anim}
                     mountOnEnter
                     unmountOnExit
-                    easing={ theme.transitions.easing.easeInOut }
+                    easing={ theme.transitions.easing.easeIn }
                     timeout={{ enter: theme.transitions.duration.enteringScreen, exit: theme.transitions.duration.leavingScreen }}
                   >
                     <TabPanel value="3">
