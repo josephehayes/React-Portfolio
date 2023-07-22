@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "devDependencies": {
-    "concurrently": "^5.1.0"
+    "concurrently": "^5.1.0",
+    "eslint-plugin-react-hooks": "^4.6.0"
   },
   "scripts": {
     "start": "node server/server.js",
@@ -23,5 +24,7 @@
   "bugs": {
     "url": "https://github.com/josephehayes/20-React-Portfolio/issues"
   },
-  "homepage": "https://github.com/josephehayes/20-React-Portfolio#readme"
+  "homepage": "https://github.com/josephehayes/20-React-Portfolio#readme",
+  "dependencies": {
+  }
 }
