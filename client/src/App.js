@@ -16,15 +16,13 @@ import Contact from './components/contact';
 function App() {
 
   const [value, setValue] = useState("1");
-  const [anim, setAnim] = useState('down')
+  const [anim, setAnim] = useState('down');
   const containerRef = useRef(null);
 
   const handleChange = (event, newTab) => {
     value < newTab ? setAnim('up') : setAnim('down');
     setValue(newTab);
   }
-
-
 
   return (
     <ThemeProvider theme={theme}>
@@ -74,7 +72,6 @@ function App() {
                     container={containerRef.current}
                     direction={anim}
                     mountOnEnter
-                    unmountOnExit
                     easing={ theme.transitions.easing.easeIn }
                     timeout={{ enter: theme.transitions.duration.enteringScreen, exit: theme.transitions.duration.leavingScreen }}
                   >
@@ -87,7 +84,6 @@ function App() {
                     container={containerRef.current}
                     direction={anim}
                     mountOnEnter
-                    unmountOnExit
                     easing={ theme.transitions.easing.easeIn }
                     timeout={{ enter: theme.transitions.duration.enteringScreen, exit: theme.transitions.duration.leavingScreen }}
                   >
@@ -100,7 +96,6 @@ function App() {
                     container={containerRef.current}
                     direction={anim}
                     mountOnEnter
-                    unmountOnExit
                     easing={ theme.transitions.easing.easeIn }
                     timeout={{ enter: theme.transitions.duration.enteringScreen, exit: theme.transitions.duration.leavingScreen }}
                   >
