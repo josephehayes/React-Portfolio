@@ -8,13 +8,15 @@ import { CardActionArea } from '@mui/material';
 const FirstPortfolioCard = () => {
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+      <CardActionArea
+        href="http://html-css-portfolio-production.up.railway.app"
+        target='_blank'
+      >
         <CardMedia
           component="img"
           height="140"
           image="/static/HTML-CSS-Portfolio-SS.png"
           alt="First Portfolio"
-          // html-css-portfolio-production.up.railway.app
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">

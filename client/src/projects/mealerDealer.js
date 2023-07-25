@@ -8,13 +8,16 @@ import { CardActionArea } from '@mui/material';
 const MealerDealerCard = () => {
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+      <CardActionArea
+        href="http://the-mealer-dealer-production-c695.up.railway.app/"
+        target='_blank'
+      >
         <CardMedia
           component="img"
           height="140"
           image="/static/Mealer-Dealer-SS.png"
           alt="The Mealer Dealer"
-          // https://the-mealer-dealer-production-c695.up.railway.app/
+        // https://the-mealer-dealer-production-c695.up.railway.app/
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">

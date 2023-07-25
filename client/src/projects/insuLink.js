@@ -8,17 +8,20 @@ import { CardActionArea } from '@mui/material';
 const InsulinkCard = () => {
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+      <CardActionArea
+        href="http://insulink-main.up.railway.app/"
+        target='_blank'
+      >
         <CardMedia
           component="img"
           height="140"
           image="/static/InsuLink-SS.png"
           alt="InsuLink"
-          // https://insulink-main.up.railway.app/
+        // https://insulink-main.up.railway.app/
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            InsuLink 
+            InsuLink
           </Typography>
           <Typography variant="body2" color="text.secondary">
             A group project app using React, MUI, MongoDB, and GraphQL to solve an issue parents with T1D children face every year.
