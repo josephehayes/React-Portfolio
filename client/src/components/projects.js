@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Grid } from '@mui/material';
 import FirstPortfolioCard from '../projects/firstPortfolio';
 import NBATrackerCard from '../projects/NBATracker';
 import MealerDealerCard from '../projects/mealerDealer';
 import InsulinkCard from '../projects/insuLink';
 
-const ProjectsList = () => {
+const ProjectsList = memo(function ProjectsList() {
     return (
         <Grid container
             id='proj-container'
@@ -41,6 +41,6 @@ const ProjectsList = () => {
             </Grid>
         </Grid>
     );
-};
+});
 
 export default ProjectsList;

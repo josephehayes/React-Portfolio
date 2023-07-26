@@ -1,8 +1,14 @@
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
-    icon: {
-        minWidth: '200px'
+    components: {
+        MuiSvgIcon: {
+            styleOverrides: {
+                fontSizeLarge: {
+                    fontSize: '50px'
+                }
+            }
+        }
     },
     palette: {
         root: {

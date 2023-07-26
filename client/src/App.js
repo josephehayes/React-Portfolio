@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState, useRef } from 'react';
 import { ThemeProvider, CssBaseline, Container, Slide } from '@mui/material';
+import { TransitionGroup } from 'react-transition-group';
 import theme from "./styles/index";
 import Header from './components/header';
 // import NavTabs from './components/navTabs';
@@ -67,42 +68,52 @@ function App() {
                     alignItems: 'center'
                   }}
                 >
-                  <Slide
-                    in={value === "1"}
-                    container={containerRef.current}
-                    direction={anim}
-                    mountOnEnter
-                    easing={ theme.transitions.easing.easeIn }
-                    timeout={{ enter: theme.transitions.duration.enteringScreen, exit: theme.transitions.duration.leavingScreen }}
+                  <TransitionGroup
+                  component={null}
+                  appear={true}
+                  enter={true}
+                  exit={true}
                   >
-                    <TabPanel value="1">
-                      <Home />
-                    </TabPanel>
-                  </Slide>
-                  <Slide
-                    in={value === "2"}
-                    container={containerRef.current}
-                    direction={anim}
-                    mountOnEnter
-                    easing={ theme.transitions.easing.easeIn }
-                    timeout={{ enter: theme.transitions.duration.enteringScreen, exit: theme.transitions.duration.leavingScreen }}
-                  >
-                    <TabPanel value="2" sx={{}}>
-                      <ProjectsList />
-                    </TabPanel>
-                  </Slide>
-                  <Slide
-                    in={value === "3"}
-                    container={containerRef.current}
-                    direction={anim}
-                    mountOnEnter
-                    easing={ theme.transitions.easing.easeIn }
-                    timeout={{ enter: theme.transitions.duration.enteringScreen, exit: theme.transitions.duration.leavingScreen }}
-                  >
-                    <TabPanel value="3">
-                      <Contact />
-                    </TabPanel>
-                  </Slide>
+                    <Slide
+                      in={value === "1"}
+                      container={containerRef.current}
+                      direction={anim}
+                      // enter={true}
+                      // exit={true}
+                      // easing={theme.transitions.easing.easeIn}
+                      // timeout={{ enter: theme.transitions.duration.enteringScreen, exit: theme.transitions.duration.leavingScreen }}
+                    >
+                      <TabPanel value="1">
+                        <Home />
+                      </TabPanel>
+                    </Slide>
+                    <Slide
+                      in={value === "2"}
+                      container={containerRef.current}
+                      direction={anim}
+                      // enter={true}
+                      // exit={true}
+                      // easing={theme.transitions.easing.easeIn}
+                      // timeout={{ enter: theme.transitions.duration.enteringScreen, exit: theme.transitions.duration.leavingScreen }}
+                    >
+                      <TabPanel value="2">
+                        <ProjectsList />
+                      </TabPanel>
+                    </Slide>
+                    <Slide
+                      in={value === "3"}
+                      container={containerRef.current}
+                      direction={anim}
+                      // enter={true}
+                      // exit={true}
+                      // easing={theme.transitions.easing.easeIn}
+                      // timeout={{ enter: theme.transitions.duration.enteringScreen, exit: theme.transitions.duration.leavingScreen }}
+                    >
+                      <TabPanel value="3">
+                        <Contact />
+                      </TabPanel>
+                    </Slide>
+                  </TransitionGroup>
                 </Box>
               </Grid>
             </TabContext>

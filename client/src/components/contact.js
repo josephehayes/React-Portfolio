@@ -1,10 +1,9 @@
 // es-lint disable next line
 import { Box, Grid, Stack, Link, Typography } from '@mui/material';
 import { LinkedIn, Twitter, GitHub } from '@mui/icons-material';
+import React, { memo } from 'react';
 
-import React from 'react';
-
-const Contact = () => {
+const Contact = memo(function Contact() {
     return (
         <Grid container
             orientation={'vertical'}
@@ -28,7 +27,6 @@ const Contact = () => {
                     <Link href="https://twitter.com/s3f96" target="_blank" >
                         <Twitter fontSize='large' />
                     </Link>
-                    {/* Filler */}
                 </Box>
             </Grid>
             <Grid item>
@@ -45,6 +43,6 @@ const Contact = () => {
             </Grid>
         </Grid>
     )
-}
+});
 
 export default Contact;
