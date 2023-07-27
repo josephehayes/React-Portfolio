@@ -5,7 +5,8 @@ import NBATrackerCard from '../projects/NBATracker';
 import MealerDealerCard from '../projects/mealerDealer';
 import InsulinkCard from '../projects/insuLink';
 
-const ProjectsList = memo(function ProjectsList() {
+const ProjectsList = () => {
+// memo(function ProjectsList() {
     return (
         <Grid container
             id='proj-container'
@@ -41,6 +42,7 @@ const ProjectsList = memo(function ProjectsList() {
             </Grid>
         </Grid>
     );
-});
+}
+// );
 
 export default ProjectsList;

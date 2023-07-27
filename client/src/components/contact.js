@@ -3,7 +3,8 @@ import { Box, Grid, Stack, Link, Typography } from '@mui/material';
 import { LinkedIn, Twitter, GitHub } from '@mui/icons-material';
 import React, { memo } from 'react';
 
-const Contact = memo(function Contact() {
+const Contact = () => {
+// memo(function Contact() {
     return (
         <Grid container
             orientation={'vertical'}
@@ -43,6 +44,7 @@ const Contact = memo(function Contact() {
             </Grid>
         </Grid>
     )
-});
+}
+// );
 
 export default Contact;

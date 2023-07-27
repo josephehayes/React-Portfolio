@@ -1,7 +1,8 @@
 import { Box, Container, Typography } from '@mui/material';
 import React, { memo } from 'react';
 
-const Home = memo(function Home() {
+const Home = () => {
+// memo(function Home() {
 
     return (
         <Container>
@@ -14,6 +15,7 @@ const Home = memo(function Home() {
             </Box>
         </Container>
     );
-});
+}
+// );
 
 export default Home;
