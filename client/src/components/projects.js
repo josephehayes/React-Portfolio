@@ -1,11 +1,12 @@
-import React, { memo } from 'react';
+import React, { memo, forwardRef } from 'react';
 import { Grid } from '@mui/material';
 import FirstPortfolioCard from '../projects/firstPortfolio';
 import NBATrackerCard from '../projects/NBATracker';
 import MealerDealerCard from '../projects/mealerDealer';
 import InsulinkCard from '../projects/insuLink';
 
-const ProjectsList = memo(function ProjectsList() {
+const ProjectsList = forwardRef((props, ref) => {
+
     return (
         <Grid container
             id='proj-container'
@@ -14,6 +15,7 @@ const ProjectsList = memo(function ProjectsList() {
             justifyContent={'space-around'}
             rowSpacing={6}
             sx={{ marginTop: 0 }}
+            ref={ref}
         >
             <Grid container item
                 id='proj-top-row'
@@ -43,4 +45,4 @@ const ProjectsList = memo(function ProjectsList() {
     );
 });
 
-export default ProjectsList;
+export default memo(ProjectsList);
