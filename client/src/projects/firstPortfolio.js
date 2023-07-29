@@ -7,7 +7,7 @@ import { CardActionArea } from '@mui/material';
 
 const FirstPortfolioCard = () => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 }} >
       <CardActionArea
         href="http://html-css-portfolio-production.up.railway.app"
         target='_blank'

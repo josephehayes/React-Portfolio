@@ -2,6 +2,8 @@
 .projCard {
     flex: 1;
     padding-left: 20px;
+    /* margin-left: auto;
+    margin-right: auto; */
 }
 
 .projCard:hover {

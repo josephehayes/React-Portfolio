@@ -5,38 +5,41 @@ import NBATrackerCard from '../projects/NBATracker';
 import MealerDealerCard from '../projects/mealerDealer';
 import InsulinkCard from '../projects/insuLink';
 
+const gridStyles = {
+    padding: 0,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: 'auto',
+    marginRight: 'auto'
+}
+
 const ProjectsList = forwardRef((props, ref) => {
     const { style } = props;
 
     return (
         <Grid container
             id='proj-container'
-            direction={'column'}
-            // alignContent={'space-between'}
-            // justifyContent={'space-between'}
-            rowSpacing={6}
-            // spacing={12}
+            // direction={'column'}
+            // rowSpacing={6}
             ref={ref}
             style={style}
-            sx={{ display: 'flex', marginTop: 0, paddingLeft: 0, paddingRight: 0 }}
+            sx={gridStyles}
         >
             <Grid container item
                 id='proj-top-row'
-                justifyContent={'space-between'}
-                // rowSpacing={4}
-                // spacing={12}
+                // justifyContent={'space-between'}
             >
                 <Grid item className='projCard' >
                     <InsulinkCard />
                 </Grid>
-                <Grid item  className='projCard'>
+                <Grid item className='projCard'>
                     <MealerDealerCard />
                 </Grid>
             </Grid>
             <Grid container item
                 id='proj-bottom-row'
-                justifyContent={'space-between'}
-                // rowSpacing={4}
+                // justifyContent={'space-between'}
             >
                 <Grid item  className='projCard'>
                     <NBATrackerCard />

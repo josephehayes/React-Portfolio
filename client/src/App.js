@@ -15,7 +15,9 @@ function App() {
         <Grid item xs={12}>
           <Header />
         </Grid>
-        <MainTabs />
+        <Grid item xs={12}>
+          <MainTabs />
+        </Grid>
       </Grid>
     </ThemeProvider >
   );

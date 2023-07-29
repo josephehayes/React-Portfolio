@@ -17,7 +17,7 @@ function CustomTabPanel(props) {
   return (
     <div
       role="tabpanel"
-      // hidden={value !== index}
+      hidden={value !== index}
       id={`main-tabpanel-${index}`}
       aria-labelledby={`main-tab-${index}`}
       {...other}
@@ -57,17 +57,16 @@ function MainTabs() {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
-      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', borderBottom: 1, borderColor: 'divider', paddingBottom: '1%' }}>
+    <Box className='tabcont' sx={{ width: '100%' }}>
+      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', borderBottom: 1, borderColor: 'divider', paddingBottom: '5px' }}>
         <Tabs value={value} onChange={handleChange} aria-label="Nav Tabs">
           <Tab label="Home" {...a11yProps(0)} />
           <Tab label="Projects" {...a11yProps(1)} />
           <Tab label="Resume" {...a11yProps(2)} />
           <Tab label="Contact" {...a11yProps(3)} />
-
         </Tabs>
       </Box>
-      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingLeft: '5%', paddingRight: '5%' }}>
+      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingLeft: '5%', paddingRight: '5%', width: '100%' }}>
         <TransitionGroup>
           <CustomTabPanel value={value} index={0}>
             <Fade
@@ -112,7 +111,6 @@ function MainTabs() {
         </TransitionGroup>
       </Box>
     </Box>
-
   );
 }
 
