@@ -7,7 +7,8 @@ import Box from '@mui/material/Box';
 import Home from './home';
 import ProjectsList from './projects';
 import Contact from './contact';
-import { Slide } from '@mui/material';
+import Fade from '@mui/material/Fade';
+import { TransitionGroup } from 'react-transition-group';
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -15,7 +16,7 @@ function CustomTabPanel(props) {
   return (
     <div
       role="tabpanel"
-      hidden={value !== index}
+      // hidden={value !== index}
       id={`main-tabpanel-${index}`}
       aria-labelledby={`main-tab-${index}`}
       {...other}
@@ -63,24 +64,38 @@ function MainTabs() {
           <Tab label="Contact" {...a11yProps(2)} />
         </Tabs>
       </Box>
-      <CustomTabPanel value={value} index={0}>
-        <Slide in={tabRef.current === 0} direction='right'
-        timeout={{ enter: 1000, exit: (tabRef.current === 0) ? 1 : 900 }}>
-          <Home />
-        </Slide>
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={1}>
-        <Slide in={tabRef.current === 1} direction='right'
-        timeout={{ enter: 1000, exit: (tabRef.current === 0) ? 1 : 900 }}>
-          <ProjectsList />
-        </Slide>
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={2}>
-        <Slide in={tabRef.current === 2} direction='right'
-        timeout={{ enter: 1000, exit: (tabRef.current === 0) ? 1 : 900 }}>
-          <Contact />
-        </Slide>
-      </CustomTabPanel>
+      <TransitionGroup>
+        <CustomTabPanel value={value} index={0}>
+          <Fade 
+          in={tabRef.current === 0}
+            mountOnEnter
+            unmountOnExit
+            timeout={{ enter: 1000, exit: (tabRef.current === 0) ? 1 : 900 }}
+          >
+            <Home />
+          </Fade>
+        </CustomTabPanel>
+        <CustomTabPanel value={value} index={1}>
+          <Fade
+            in={tabRef.current === 1}
+            mountOnEnter
+            unmountOnExit
+            timeout={{ enter: 1000, exit: (tabRef.current === 1) ? 1 : 900 }}
+          >
+            <ProjectsList />
+          </Fade>
+        </CustomTabPanel>
+        <CustomTabPanel value={value} index={2}>
+          <Fade 
+          in={tabRef.current === 2}
+            mountOnEnter
+            unmountOnExit
+            timeout={{ enter: 1000, exit: (tabRef.current === 2) ? 1 : 900 }}
+          >
+            <Contact />
+          </Fade>
+        </CustomTabPanel>
+      </TransitionGroup>
     </Box>
 
   );

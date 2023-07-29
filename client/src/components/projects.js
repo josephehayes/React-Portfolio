@@ -6,6 +6,7 @@ import MealerDealerCard from '../projects/mealerDealer';
 import InsulinkCard from '../projects/insuLink';
 
 const ProjectsList = forwardRef((props, ref) => {
+    const { style } = props;
 
     return (
         <Grid container
@@ -16,6 +17,7 @@ const ProjectsList = forwardRef((props, ref) => {
             rowSpacing={6}
             sx={{ marginTop: 0 }}
             ref={ref}
+            style={style}
         >
             <Grid container item
                 id='proj-top-row'

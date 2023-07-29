@@ -4,11 +4,14 @@ import { LinkedIn, Twitter, GitHub } from '@mui/icons-material';
 import React, { memo, forwardRef } from 'react';
 
 const Contact = forwardRef((props, ref) => {
+    const { style } = props;
+
     return (
         <Grid container
             orientation={'vertical'}
             justifyContent={'center'}
             ref={ref}
+            style={style}
         >
             <Grid item spacing={4} xs={12} alignItems={'center'}>
                 <Box sx={{
