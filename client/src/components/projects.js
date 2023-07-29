@@ -12,34 +12,36 @@ const ProjectsList = forwardRef((props, ref) => {
         <Grid container
             id='proj-container'
             direction={'column'}
-            alignContent={'center'}
-            justifyContent={'space-around'}
+            // alignContent={'space-between'}
+            // justifyContent={'space-between'}
             rowSpacing={6}
-            sx={{ marginTop: 0 }}
+            // spacing={12}
             ref={ref}
             style={style}
+            sx={{ display: 'flex', marginTop: 0, paddingLeft: 0, paddingRight: 0 }}
         >
             <Grid container item
                 id='proj-top-row'
-                justifyContent={'space-evenly'}
-                rowSpacing={4}
+                justifyContent={'space-between'}
+                // rowSpacing={4}
+                // spacing={12}
             >
-                <Grid item >
+                <Grid item className='projCard' >
                     <InsulinkCard />
                 </Grid>
-                <Grid item >
+                <Grid item  className='projCard'>
                     <MealerDealerCard />
                 </Grid>
             </Grid>
             <Grid container item
                 id='proj-bottom-row'
-                justifyContent={'space-evenly'}
-                rowSpacing={4}
+                justifyContent={'space-between'}
+                // rowSpacing={4}
             >
-                <Grid item >
+                <Grid item  className='projCard'>
                     <NBATrackerCard />
                 </Grid>
-                <Grid item >
+                <Grid item  className='projCard'>
                     <FirstPortfolioCard />
                 </Grid>
             </Grid>

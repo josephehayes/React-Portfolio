@@ -1,0 +1,10 @@
+
+.projCard {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.projCard:hover {
+    transition: all 250ms ease-in-out;
+    transform: scale(1.5);
+}
