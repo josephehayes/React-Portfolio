@@ -11,7 +11,8 @@ const gridStyles = {
     justifyContent: 'center',
     alignItems: 'center',
     marginLeft: 'auto',
-    marginRight: 'auto'
+    marginRight: 'auto',
+    width: '100%'
 }
 
 const ProjectsList = forwardRef((props, ref) => {
@@ -21,14 +22,15 @@ const ProjectsList = forwardRef((props, ref) => {
         <Grid container
             id='proj-container'
             // direction={'column'}
-            // rowSpacing={6}
+            rowSpacing={6}
+            // spacing={6}
             ref={ref}
             style={style}
             sx={gridStyles}
         >
             <Grid container item
                 id='proj-top-row'
-                // justifyContent={'space-between'}
+                justifyContent={'space-around'}
             >
                 <Grid item className='projCard' >
                     <InsulinkCard />
@@ -39,12 +41,12 @@ const ProjectsList = forwardRef((props, ref) => {
             </Grid>
             <Grid container item
                 id='proj-bottom-row'
-                // justifyContent={'space-between'}
+                justifyContent={'space-around'}
             >
-                <Grid item  className='projCard'>
+                <Grid item className='projCard'>
                     <NBATrackerCard />
                 </Grid>
-                <Grid item  className='projCard'>
+                <Grid item className='projCard'>
                     <FirstPortfolioCard />
                 </Grid>
             </Grid>

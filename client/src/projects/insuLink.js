@@ -7,7 +7,9 @@ import { CardActionArea } from '@mui/material';
 
 const InsulinkCard = () => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card 
+    // sx={{ maxWidth: 345 }}
+    >
       <CardActionArea
         href="http://insulink-main.up.railway.app/"
         target='_blank'
@@ -17,6 +19,7 @@ const InsulinkCard = () => {
           height="140"
           image="/static/InsuLink-SS.png"
           alt="InsuLink"
+          className="cardImg"
         // https://insulink-main.up.railway.app/
         />
         <CardContent>
