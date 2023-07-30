@@ -1,14 +1,17 @@
 // es-lint disable next line
 import { Box, Grid, Stack, Link, Typography } from '@mui/material';
 import { LinkedIn, Twitter, GitHub } from '@mui/icons-material';
+import React, { memo, forwardRef } from 'react';
 
-import React from 'react';
+const Contact = forwardRef((props, ref) => {
+    const { style } = props;
 
-const Contact = () => {
     return (
         <Grid container
             orientation={'vertical'}
             justifyContent={'center'}
+            ref={ref}
+            style={style}
         >
             <Grid item spacing={4} xs={12} alignItems={'center'}>
                 <Box sx={{
@@ -17,7 +20,6 @@ const Contact = () => {
                     marginLeft: 'auto',
                     marginRight: 'auto',
                     justifyContent: 'space-around',
-                    
                 }}>
                     <Link href="https://github.com/josephehayes" target="_blank" >
                         <GitHub fontSize='large' />
@@ -28,7 +30,6 @@ const Contact = () => {
                     <Link href="https://twitter.com/s3f96" target="_blank" >
                         <Twitter fontSize='large' />
                     </Link>
-                    {/* Filler */}
                 </Box>
             </Grid>
             <Grid item>
@@ -45,6 +46,7 @@ const Contact = () => {
             </Grid>
         </Grid>
     )
-}
+})
 
-export default Contact;
+
+export default memo(Contact);

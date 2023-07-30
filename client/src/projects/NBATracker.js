@@ -7,7 +7,9 @@ import { CardActionArea } from '@mui/material';
 
 const NBATrackerCard = () => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card 
+    // sx={{ maxWidth: 345 }}
+    >
       <CardActionArea
         href="http://nba-player-tracker-production.up.railway.app"
         target='_blank'
@@ -17,6 +19,7 @@ const NBATrackerCard = () => {
           height="140"
           image="static/NBA-Tracker-SS.png"
           alt="NBA Player Tracker"
+          className="cardImg"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
