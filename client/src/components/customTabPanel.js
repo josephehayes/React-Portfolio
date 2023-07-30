@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Home from './home';
 import ProjectsList from './projects';
-import Contact from './contact';
+// import Contact from './contact';
 import Fade from '@mui/material/Fade';
 import { TransitionGroup } from 'react-transition-group';
 import Resume from './resume';
@@ -58,7 +58,9 @@ function MainTabs() {
 
   return (
     <Box className='tabcont' sx={{ width: '100%' }}>
-      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', borderBottom: 1, borderColor: 'divider', paddingBottom: '5px' }}>
+      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', 
+      // borderBottom: 1, borderColor: 'divider', 
+      paddingBottom: '5px' }}>
         <Tabs value={value} onChange={handleChange} aria-label="Nav Tabs">
           <Tab label="Home" {...a11yProps(0)} />
           <Tab label="Projects" {...a11yProps(1)} />
