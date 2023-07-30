@@ -63,7 +63,7 @@ function MainTabs() {
           <Tab label="Home" {...a11yProps(0)} />
           <Tab label="Projects" {...a11yProps(1)} />
           <Tab label="Resume" {...a11yProps(2)} />
-          <Tab label="Contact" {...a11yProps(3)} />
+          {/* <Tab label="Contact" {...a11yProps(3)} /> */}
         </Tabs>
       </Box>
       <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingLeft: '5%', paddingRight: '5%', width: '100%' }}>
@@ -98,7 +98,7 @@ function MainTabs() {
               <Resume />
             </Fade>
           </CustomTabPanel>
-          <CustomTabPanel value={value} index={3}>
+          {/* <CustomTabPanel value={value} index={3}>
             <Fade
               in={tabRef.current === 3}
               mountOnEnter
@@ -107,7 +107,7 @@ function MainTabs() {
             >
               <Contact />
             </Fade>
-          </CustomTabPanel>
+          </CustomTabPanel> */}
         </TransitionGroup>
       </Box>
     </Box>
