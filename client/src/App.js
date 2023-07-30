@@ -5,6 +5,7 @@ import theme from "./styles/index";
 import Header from './components/header';
 import { Grid } from '@mui/material';
 import MainTabs from './components/customTabPanel';
+import Footer from './components/footer';
 
 function App() {
 
@@ -17,6 +18,13 @@ function App() {
         </Grid>
         <Grid item xs={12}>
           <MainTabs />
+        </Grid>
+        <Grid item xs={12}
+        sx={{
+          marginBottom: 0,
+          marginTop: '60vh'
+        }}>
+          <Footer />
         </Grid>
       </Grid>
     </ThemeProvider >
