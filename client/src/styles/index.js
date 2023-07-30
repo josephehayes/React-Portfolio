@@ -5,10 +5,15 @@ const theme = createTheme({
         MuiSvgIcon: {
             styleOverrides: {
                 fontSizeLarge: {
-                    fontSize: '50px'
+                    // fontSize: '50px'
                 }
             }
-        }
+        },
+        MuiButtonBase: {
+            defaultProps: {
+                disableRipple: true, // No more ripple, on the whole application 💣!
+            },
+        },
     },
     palette: {
         root: {
