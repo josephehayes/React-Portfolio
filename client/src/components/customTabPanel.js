@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Home from './home';
 import ProjectsList from './projects';
-import Contact from './contact';
+// import Contact from './contact';
 import Fade from '@mui/material/Fade';
 import { TransitionGroup } from 'react-transition-group';
 import Resume from './resume';
