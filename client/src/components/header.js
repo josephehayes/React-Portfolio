@@ -1,4 +1,5 @@
 import React from 'react';
+import theme from '../styles/theme';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import { Box, Typography, Grid, Link } from '@mui/material';
@@ -19,7 +20,7 @@ const Header = () => {
                             xs={11}
                         >
                             <Grid item xs>
-                                <Typography component='h1' variant='h3'>
+                                <Typography component='h1' variant='h3' className={theme.header}>
                                     Joseph Hayes
                                 </Typography>
                             </Grid>

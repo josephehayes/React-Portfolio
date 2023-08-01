@@ -17,7 +17,7 @@ const NBATrackerCard = () => {
         <CardMedia
           component="img"
           height="140"
-          image="static/NBA-Tracker-SS.png"
+          image="static/projectPics/NBA-Tracker-SS.png"
           alt="NBA Player Tracker"
           className="cardImg"
         />

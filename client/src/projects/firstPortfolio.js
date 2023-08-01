@@ -17,7 +17,7 @@ const FirstPortfolioCard = () => {
         <CardMedia
           component="img"
           height="140"
-          image="/static/HTML-CSS-Portfolio-SS.png"
+          image="/static/projectPics/HTML-CSS-Portfolio-SS.png"
           alt="First Portfolio"
           className="cardImg"
         />
