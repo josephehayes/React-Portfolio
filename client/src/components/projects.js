@@ -28,7 +28,7 @@ const ProjectsList = forwardRef((props, ref) => {
         >
             <Grid container item
                 id='proj-top-row'
-                justifyContent={'space-around'}
+                justifyContent={'space-evenly'}
             >
                 <Grid item className='projCard' >
                     <InsulinkCard />
@@ -39,7 +39,7 @@ const ProjectsList = forwardRef((props, ref) => {
             </Grid>
             <Grid container item
                 id='proj-bottom-row'
-                justifyContent={'space-around'}
+                justifyContent={'space-evenly'}
             >
                 <Grid item className='projCard'>
                     <NBATrackerCard />
