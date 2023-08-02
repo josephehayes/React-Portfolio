@@ -26,7 +26,7 @@ const Header = () => {
                             </Grid>
                             <Grid item xs>
                                 <Typography component='h1' variant='subtitle1'>
-                                    Full-stack Developer
+                                    Full-stack Web Developer
                                 </Typography>
                             </Grid>
                         </Grid>

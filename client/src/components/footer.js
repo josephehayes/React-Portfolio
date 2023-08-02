@@ -20,7 +20,7 @@ const Footer = () => {
             }}
         >
             <Typography>
-                ❤️ Made with Node, React, MUI (and love) ❤️
+                Made with NodeJS, React, MUI (and love ❤️) 
             </Typography>
         </Box>
     );

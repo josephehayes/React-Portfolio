@@ -21,9 +21,7 @@ const ProjectsList = forwardRef((props, ref) => {
     return (
         <Grid container
             id='proj-container'
-            // direction={'column'}
             rowSpacing={6}
-            // spacing={6}
             ref={ref}
             style={style}
             sx={gridStyles}
