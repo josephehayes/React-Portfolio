@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 
-const font = "'Comfortaa', cursive";
+const font = "'Montserrat', sans-serif";
 
 const theme = createTheme({
     components: {

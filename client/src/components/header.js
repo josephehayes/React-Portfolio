@@ -2,8 +2,9 @@ import React from 'react';
 import theme from '../styles/theme';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import { Box, Typography, Grid, Link } from '@mui/material';
-import { GitHub, Twitter, LinkedIn } from '@mui/icons-material';
+import { Box, Typography, Grid, Link, Tooltip } from '@mui/material';
+import { GitHub, AlternateEmail, LinkedIn } from '@mui/icons-material';
+//Twitter removed
 
 const Header = () => {
     return (
@@ -20,7 +21,7 @@ const Header = () => {
                             xs={11}
                         >
                             <Grid item xs>
-                                <Typography component='h1' variant='h3' className={theme.header}>
+                                <Typography component='h1' variant='h3' className={theme.header} sx={{ fontWeight: '500' }}>
                                     Joseph Hayes
                                 </Typography>
                             </Grid>
@@ -36,18 +37,23 @@ const Header = () => {
                             sx={{
                                 display: 'flex',
                                 justifyContent: 'space-between'
-
                             }}
                         >
-                            <Link href="https://github.com/josephehayes" target="_blank" className="linkIcon" >
-                                <GitHub fontSize='large' />
-                            </Link>
-                            <Link href="https://www.linkedin.com/in/josephehayes1/" target="_blank" className="linkIcon" >
-                                <LinkedIn fontSize='large' />
-                            </Link>
-                            <Link href="https://twitter.com/s3f96" target="_blank" className="linkIcon" >
-                                <Twitter fontSize='large' />
-                            </Link>
+                            <Tooltip title="GitHub">
+                                <Link href="https://github.com/josephehayes" target="_blank" className="linkIcon" >
+                                    <GitHub fontSize='large' />
+                                </Link>
+                            </Tooltip>
+                            <Tooltip title="LinkedIn">
+                                <Link href="https://www.linkedin.com/in/josephehayes1/" target="_blank" className="linkIcon" >
+                                    <LinkedIn fontSize='large' />
+                                </Link>
+                            </Tooltip>
+                            <Tooltip title="Email">
+                                <Link href="mailto:joey.hayes.1996@gmail.com" target="_blank" className="linkIcon" >
+                                    <AlternateEmail fontSize='large' />
+                                </Link>
+                            </Tooltip>
                         </Grid>
                     </Grid>
                 </Toolbar>

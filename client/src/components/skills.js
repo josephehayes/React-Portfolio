@@ -44,7 +44,8 @@ const headStyle = {
     borderColor: 'divider',
     paddingTop: 2,
     paddingBottom: 2,
-    maxHeight: '33%'
+    maxHeight: '33%',
+    fontWeight: '700'
 };
 
 const bodyStyle = {
