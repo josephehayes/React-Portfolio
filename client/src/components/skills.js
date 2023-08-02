@@ -90,7 +90,7 @@ const Resume = forwardRef((props, ref) => {
                             </Grid>
                             <Grid item>
                                 <TailwindIcon fontSize='large' sx={iconStyle} />
-                                <Typography>TailwindCSS</Typography>
+                                <Typography>Tailwind</Typography>
                             </Grid>
                         </Grid>
                     </Grid>
