@@ -1,15 +1,50 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Grid, Paper } from '@mui/material';
 import React, { forwardRef, memo } from 'react';
 
 const Home = forwardRef((props, ref) => {
     const { style } = props;
 
     return (
-            <Box ref={ref} style={style} sx={{ width: '100%', height: '100%' }}>
-                <Typography component='body' variant='body'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean pharetra magna ac placerat vestibulum. Morbi non arcu risus quis varius. Cursus eget nunc scelerisque viverra mauris. Massa massa ultricies mi quis hendrerit dolor. Hendrerit gravida rutrum quisque non tellus. Nec ullamcorper sit amet risus. Congue quisque egestas diam in arcu cursus euismod quis viverra. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus. Neque volutpat ac tincidunt vitae semper quis lectus. Vestibulum lectus mauris ultrices eros in cursus turpis massa. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Fringilla urna porttitor rhoncus dolor purus non. Odio morbi quis commodo odio aenean sed adipiscing. Odio morbi quis commodo odio aenean sed adipiscing diam donec. Sem nulla pharetra diam sit amet nisl suscipit. Non nisi est sit amet facilisis magna etiam tempor. Tempor orci dapibus ultrices in iaculis nunc sed augue.
-                </Typography>
-            </Box>
+        <Box ref={ref} style={style} sx={{ width: '100%', height: '60vh' }}>
+            <Paper sx={{ minHeight: '100%' }}>
+                <Grid container sx={{ paddingTop: '2%', paddingBottom: '2%' }}>
+                    <Grid item xs={6} sx={{ paddingLeft: '50px' }}>
+                        <Typography variant="h1" color="text">
+                            Hi,
+                        </Typography>
+                        <br />
+                        <Typography variant='h5' style={{ whiteSpace: 'pre-line' }}>
+                            I'm <strong>Joseph</strong>, a <strong>full-stack web developer</strong> with a passion for building <strong>user-centered applications</strong>. I graduated from the University of Utah Full-Stack Bootcamp in 2023.
+                        </Typography>
+                        <br />
+                        <Typography variant='h5'>
+                            I've worked most of my career in a variety of customer-facing technical roles. This experience has given me a deep understanding of the <strong>needs of users</strong>, and I use this knowledge to build applications that are both <strong>functional</strong> and <strong>user-friendly</strong>.
+                        </Typography>
+                        <br />
+                        <Typography variant='h5'>
+                            Please take a look around my site!
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={6}
+                        sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center'
+                        }}>
+                        <Box
+                            component="img"
+                            sx={{
+                                maxHeight: '50%',
+                                maxWidth: '50%',
+                                borderRadius: '50%'
+                            }}
+                            alt="Pic of me"
+                            src="/static/headshot.jpeg"
+                        />
+                    </Grid>
+                </Grid>
+            </Paper>
+        </Box>
     );
 })
 
