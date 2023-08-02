@@ -1,11 +1,13 @@
 import './App.css';
 import React from 'react';
 import { ThemeProvider, CssBaseline } from '@mui/material';
-import theme from "./styles/index";
+import theme from "./styles/theme";
 import Header from './components/header';
 import { Grid } from '@mui/material';
-import MainTabs from './components/customTabPanel';
+import MainTabs from './components/tabPanel';
 import Footer from './components/footer';
+
+
 
 function App() {
 
@@ -19,15 +21,11 @@ function App() {
         <Grid item xs={12}>
           <MainTabs />
         </Grid>
-        <Grid item xs={12}
-        sx={{
-          marginBottom: 0,
-          marginTop: '60vh'
-        }}>
+        <Grid item xs={12}>
           <Footer />
         </Grid>
       </Grid>
-    </ThemeProvider >
+    </ThemeProvider>
   );
 }
 

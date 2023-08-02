@@ -9,7 +9,7 @@ import ProjectsList from './projects';
 // import Contact from './contact';
 import Fade from '@mui/material/Fade';
 import { TransitionGroup } from 'react-transition-group';
-import Resume from './resume';
+import Skills from './skills';
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -64,7 +64,7 @@ function MainTabs() {
         <Tabs value={value} onChange={handleChange} aria-label="Nav Tabs">
           <Tab label="Home" {...a11yProps(0)} />
           <Tab label="Projects" {...a11yProps(1)} />
-          <Tab label="Resume" {...a11yProps(2)} />
+          <Tab label="Skills" {...a11yProps(2)} />
           {/* <Tab label="Contact" {...a11yProps(3)} /> */}
         </Tabs>
       </Box>
@@ -97,7 +97,7 @@ function MainTabs() {
               unmountOnExit
               timeout={{ enter: 1000, exit: (tabRef.current === 2) ? 1 : 900 }}
             >
-              <Resume />
+              <Skills />
             </Fade>
           </CustomTabPanel>
           {/* <CustomTabPanel value={value} index={3}>

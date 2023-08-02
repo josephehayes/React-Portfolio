@@ -17,7 +17,7 @@ const InsulinkCard = () => {
         <CardMedia
           component="img"
           height="140"
-          image="/static/InsuLink-SS.png"
+          image="/static/projectPics/InsuLink-SS.png"
           alt="InsuLink"
           className="cardImg"
         // https://insulink-main.up.railway.app/

@@ -17,7 +17,7 @@ const MealerDealerCard = () => {
         <CardMedia
           component="img"
           height="140"
-          image="/static/Mealer-Dealer-SS.png"
+          image="/static/projectPics/Mealer-Dealer-SS.png"
           alt="The Mealer Dealer"
           className="cardImg"
         // https://the-mealer-dealer-production-c695.up.railway.app/

@@ -1,5 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 
+const font = "'Comfortaa', cursive";
+
 const theme = createTheme({
     components: {
         MuiSvgIcon: {
@@ -40,6 +42,12 @@ const theme = createTheme({
         },
         divider: '#CAD2C5'
     },
+    typography: {
+        fontFamily: font,
+        header: {
+            fontFamily: font,
+        },
+    }
 });
 
 export default theme;
