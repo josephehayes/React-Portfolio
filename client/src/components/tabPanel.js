@@ -57,9 +57,10 @@ function MainTabs() {
   };
 
   return (
-    <Box className='tabcont' sx={{ width: '100%', padding: 0, minHeight: '100vh' }}>
+    <Box className='tabcont' sx={{ width: '100%', padding: 0, minHeight: '100%' }}>
       <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', 
-      paddingBottom: '5px', marginTop: '5px' }}>
+      // paddingBottom: '5px', marginTop: '5px' 
+      }}>
         <Tabs value={value} onChange={handleChange} aria-label="Nav Tabs">
           <Tab label="Home" {...a11yProps(0)} />
           <Tab label="Projects" {...a11yProps(1)} />

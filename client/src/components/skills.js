@@ -2,7 +2,7 @@ import { Grid, Paper, Typography } from '@mui/material';
 import React, { forwardRef, memo } from 'react';
 
 //Icons
-import { GitHub, Javascript, Css } from '@mui/icons-material';
+import { GitHub, Javascript } from '@mui/icons-material'; //, Css
 import GitLabIcon from '../assets/customIcons/gitlabIcon.js';
 import ReactIcon from '../assets/customIcons/reactIcon';
 import MuiIcon from '../assets/customIcons/muiIcon.js';
@@ -22,12 +22,12 @@ import NpmIcon from '../assets/customIcons/npmIcon.js';
 const gridStyles = {
     padding: 0,
     display: 'flex',
+    flexWrap: 'wrap',
     justifyContent: 'center',
     alignItems: 'center',
     marginLeft: 'auto',
     marginRight: 'auto',
     width: '100%',
-
 };
 
 const paperStyle = {
@@ -81,10 +81,10 @@ const Resume = forwardRef((props, ref) => {
                                 <Javascript fontSize='large' sx={iconStyle} />
                                 <Typography>JavaScript</Typography>
                             </Grid>
-                            <Grid item>
+                            {/* <Grid item>
                                 <Css fontSize='large' sx={iconStyle} />
                                 <Typography>CSS3</Typography>
-                            </Grid>
+                            </Grid> */}
                             <Grid item>
                                 <MuiIcon fontSize='large' sx={iconStyle} />
                                 <Typography>MUI</Typography>
