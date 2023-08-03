@@ -57,7 +57,7 @@ function MainTabs() {
   };
 
   return (
-    <Box className='tabcont' sx={{ width: '100%', padding: 0, minHeight: '100%' }}>
+    <Box className='tabcont' sx={{ width: '100%', padding: 0, height: '100%' }}>
       <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', 
       // paddingBottom: '5px', marginTop: '5px' 
       }}>

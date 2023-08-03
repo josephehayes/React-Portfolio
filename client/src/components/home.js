@@ -5,7 +5,7 @@ const Home = forwardRef((props, ref) => {
     const { style } = props;
 
     return (
-        <Box ref={ref} style={style} sx={{ width: '100%', height: '60vh' }}>
+        <Box ref={ref} style={style} sx={{ width: '100%', height: '100%' }}>
             <Paper sx={{ minHeight: '100%' }}>
                 <Grid container sx={{ paddingTop: '2%', paddingBottom: '2%' }}>
                     <Grid item xs={6} sx={{ paddingLeft: '50px' }}>
@@ -34,9 +34,8 @@ const Home = forwardRef((props, ref) => {
                         <Box
                             component="img"
                             sx={{
-                                width: '50%',
+                                width: '33%',
                                 height: 'auto',
-                                maxWidth: '50%',
                                 borderRadius: '50%'
                             }}
                             alt="Pic of me"
