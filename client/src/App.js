@@ -14,7 +14,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Grid container spacing={0} minHeight={'100vh'}>
+      <Grid container spacing={0} rowSpacing={0} height={'100%'} width={'100%'}>
         <Grid item xs={12}>
           <Header />
         </Grid>

@@ -13,7 +13,7 @@ const Home = forwardRef((props, ref) => {
                             Hi,
                         </Typography>
                         <br />
-                        <Typography variant='h5' style={{ whiteSpace: 'pre-line' }}>
+                        <Typography variant='h5'>
                             I'm <strong>Joseph</strong>, a <strong>full-stack web developer</strong> with a passion for building <strong>user-centered applications</strong>. I graduated from the University of Utah Full-Stack Bootcamp in 2023.
                         </Typography>
                         <br />
@@ -34,7 +34,8 @@ const Home = forwardRef((props, ref) => {
                         <Box
                             component="img"
                             sx={{
-                                maxHeight: '50%',
+                                width: '50%',
+                                height: 'auto',
                                 maxWidth: '50%',
                                 borderRadius: '50%'
                             }}
