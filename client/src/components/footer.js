@@ -5,7 +5,6 @@ const Footer = forwardRef((props, ref) => {
     return (
         <Box
             sx={{
-                // position: 'absolute',
                 width: '100%',
                 height: '2.5rem',
                 display: 'flex',
