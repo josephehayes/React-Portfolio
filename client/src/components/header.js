@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import theme from '../styles/theme';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -6,9 +6,9 @@ import { Box, Typography, Grid, Link, Tooltip } from '@mui/material';
 import { GitHub, AlternateEmail, LinkedIn } from '@mui/icons-material';
 //Twitter removed
 
-const Header = () => {
+const Header = forwardRef((props, ref) => {
     return (
-        <AppBar position="sticky">
+        <AppBar position="sticky" ref={ref}>
             <Box>
                 <Toolbar sx={{ my: 3, mx: 3 }}>
                     <Grid
@@ -60,6 +60,6 @@ const Header = () => {
             </Box>
         </AppBar>
     );
-}
+});
 
 export default Header;
