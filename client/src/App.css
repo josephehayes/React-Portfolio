@@ -6,6 +6,13 @@
     --hov: #CAD2C5;
 }
 
+.bodyWrapper {
+    -webkit-animation: bg-pan-left 8s cubic-bezier(0.645, 0.045, 0.355, 1.000) infinite;
+    animation: bg-pan-left 8s cubic-bezier(0.645, 0.045, 0.355, 1.000) infinite;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(315deg, rgba(2, 0, 36, 1) 0%, rgba(82, 121, 111, 1) 35%, rgba(47, 62, 70, 1) 100%);
+}
+
 .linkIcon:hover {
     border-bottom: 1px;
     box-shadow: 0 2px var(--hov);
@@ -24,3 +31,29 @@
 .projCard:hover {
     transform: scale(1.05);
 }
+
+/* Bg animation */
+
+@keyframes bg-pan-left {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @-webkit-keyframes bg-pan-left {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }

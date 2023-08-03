@@ -14,16 +14,18 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Grid container spacing={0}>
+      <Grid container spacing={0} minHeight={'100vh'}>
         <Grid item xs={12}>
           <Header />
         </Grid>
+        <div className='bodyWrapper'>
         <Grid item xs={12}>
-          <MainTabs />
+          <MainTabs  />
         </Grid>
         <Grid item xs={12}>
           <Footer />
         </Grid>
+        </div>
       </Grid>
     </ThemeProvider>
   );
