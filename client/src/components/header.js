@@ -10,7 +10,9 @@ const Header = () => {
     return (
         <AppBar position="sticky">
             <Box>
-                <Toolbar sx={{ my: 3, mx: 3 }}>
+                <Toolbar 
+                sx={{ my: 3, mx: 3 }}
+                >
                     <Grid
                         container
                         justifyContent={'flex-end'}
