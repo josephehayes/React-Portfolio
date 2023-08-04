@@ -67,7 +67,7 @@ function MainTabs() {
           <Tab label="Skills" {...a11yProps(2)} />
         </Tabs>
       </Box>
-      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingLeft: '5%', paddingRight: '5%', width: '100%' }}>
+      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingLeft: '5%', paddingRight: '5%', width: '100%', margin: '0' }}>
         <TransitionGroup>
           <CustomTabPanel value={value} index={0}>
             <Fade
