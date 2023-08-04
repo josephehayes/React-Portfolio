@@ -61,7 +61,9 @@ const Resume = forwardRef((props, ref) => {
     const { style } = props;
 
     return (
-        <Grid container spacing={4} alignContent={'center'}
+        <Grid container
+        spacing={6} 
+        alignContent={'center'}
             ref={ref} style={style}
             sx={gridStyles}>
             <Grid item xs={4} >
